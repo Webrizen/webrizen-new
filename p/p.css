@@ -1,0 +1,135 @@
+/* Services Starts  */
+/* Provide some spacing between elements */
+.container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style section heading */
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #f1f1f1;
+}
+.head-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: min-content;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+.head-card img{
+    filter: hue-rotate(360deg); /* Adjust the hue value as needed */
+    margin: 0 auto;
+    position: absolute;
+    top: 9px;
+    transform: rotate(-10deg);
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+/* Style individual services */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.three-col{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.service {
+  flex-basis: 30%;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: rgba(225,225,225,0.1);
+  text-align: center;
+  gap: 10px;
+  transition: 1s;
+  cursor: pointer;
+}
+.service:hover{
+    transform: translateY(-10px);
+    background: rgba(225,225,225,0.15);
+}
+/* Style service icons */
+.service i {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #f1f1f1;
+}
+.service a:hover{
+  color: rgba(225,225,225,0.6);
+}
+.service img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(225,225,225,0.1);
+}
+/* Style service titles */
+.service-title {
+  font-size: 20px;
+  color: rgb(152, 78, 220);
+  margin-bottom: 10px;
+}
+
+/* Style service descriptions */
+.service-description {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .container{
+        height: auto;
+    }
+  .three-col{
+    grid-template-columns: 1fr;
+    overflow-y: scroll;
+  }
+}
+/* Services Ends  */
+
+.card-net{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 510px;
+  overflow-y: scroll;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(225,225,225,0.1);
+}
+
+.network-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 50px 20px;
+  background: rgba(225,225,225,0.1);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.network-box:hover{
+  background: rgba(225,225,225,0.2);
+}
+.network-box i{
+  font-size: 3rem;
+}
