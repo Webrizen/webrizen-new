@@ -1,12 +1,12 @@
-//Make It A Page(Remove .html):
-// window.onload = function() {
-//     var url = window.location.href;
+// Make It A Page(Remove .html):
+window.onload = function() {
+    var url = window.location.href;
 
-//     if (url.endsWith('.html')) {
-//         url = url.slice(0, -5);
-//         window.history.pushState({}, null, url);
-//     }
-// };
+    if (url.endsWith('.html')) {
+        url = url.slice(0, -5);
+        window.history.pushState({}, null, url);
+    }
+};
 
 setTimeout(() => {
     document.getElementById('loading').style.opacity="0";
