@@ -86,7 +86,16 @@
     }
   ],
   "products": [
-   
+    {
+      "title": "SoundYank",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, est doloribus voluptatem itaque quia nemo eius consectetur saepe deserunt sequi consequatur corporis! Quos et non vitae. Odio dicta ab molestiae?",
+      "link": "/products/soundyank.html"
+    },
+    {
+      "title": "CodeNavy",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, est doloribus voluptatem itaque quia nemo eius consectetur saepe deserunt sequi consequatur corporis! Quos et non vitae. Odio dicta ab molestiae?",
+      "link": "/products/codenavy.html"
+    }
   ],
   "portfolio": [
     {
@@ -123,7 +132,7 @@
       "title": "Arshcode",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, est doloribus voluptatem itaque quia nemo eius consectetur saepe deserunt sequi consequatur corporis! Quos et non vitae. Odio dicta ab molestiae?",
       "link": "https://arshcode.vercel.app",
-      "IMG": "https://arshcode-com.vercel.app/assets/images/arshcode.png"
+      "IMG": "https://arshcode.vercel.app/Arshcode.png"
     }
   ]
 }
