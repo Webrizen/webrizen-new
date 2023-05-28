@@ -67,6 +67,16 @@
   button:hover {
     background: rgba(225, 225, 225, 0.3);
   }
+  button:disabled:hover{
+    cursor: not-allowed;
+    background: rgba(225, 225, 225, 0.1);
+  }
+  #play-button, #pause-button, #resume-button{
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+  }
   input, select  {
     padding: 15px;
     border-radius: 4px;
@@ -74,6 +84,9 @@
     color: #f1f1f1;
     border: none;
     outline: none;
+  }
+  option{
+    color: #1a1a1a;
   }
   form, .form{
     display: flex;

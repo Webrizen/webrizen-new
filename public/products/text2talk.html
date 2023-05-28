@@ -72,8 +72,8 @@
   </header>
   <section class="products-section">
     <div class="products-left">
-      <h2>CodeNavy</h2>
-      <p>Edit & Preview Your Code Without Login!</p>
+      <h2>Text2Talk</h2>
+      <p>A powerful text to speech tool for your needs!</p>
       <br />
       <hr />
       <br />
@@ -87,31 +87,46 @@
     <div class="products-middle">
       <div class="main-middle">
         <h1>
-          Paste, Edit & Preview Your Code Online Without Login.
+            A powerful text to speech tool for your needs!
         </h1>
         <p>
-          CodeNavy is a powerful online code editor that allows developers to effortlessly paste, edit, and preview their code in real-time, all without the need for logging in. With CodeNavy, you can seamlessly write and experiment with HTML, CSS, and JavaScript code, testing your ideas instantly. Boost your productivity with our intuitive interface and convenient features, empowering you to collaborate, share, and iterate on your code hassle-free. Experience the freedom to code anytime, anywhere with CodeNavy, the ultimate solution for seamless online code editing and previewing.
+            A powerful text to speech tool for your needs!
         </p>
       </div>
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="tab1">HTML</button>
-        <button class="tab-btn" data-tab="tab2">CSS</button>
-        <button class="tab-btn" data-tab="tab3">JavaScript</button>
-        <button class="tab-btn" data-tab="tab4">View</button>
-      </div>
-      <div class="tab-content">
-        <div class="tab-pane active" id="tab1">
-          <textarea id="html" placeholder="Write HTML code here..." oninput="ShowPreview()"></textarea>
-        </div>
-        <div class="tab-pane" id="tab2">
-          <textarea id="css" placeholder="Write CSS code here..." oninput="ShowPreview()"></textarea>
-        </div>
-        <div class="tab-pane" id="tab3">
-          <textarea id="js" placeholder="Write JavaScript code here..." oninput="ShowPreview()"></textarea>
-        </div>
-        <div class="tab-pane" id="tab4">
-          <iframe id="preview-window"></iframe>
-        </div>
+      <div class="container">
+        <form onsubmit="playTextToSpeech()">
+          <label for="Voice">Select Voice*</label>
+          <select name="Voice" id="Voice" required>
+          </select>
+          <label for="speed">Speed*</label>
+          <input type="number" name="speed" id="speed" value="1.00" required>
+          <label for="pitch">Pitch*</label>
+          <input type="number" name="pitch" id="pitch" value="1.00" required>
+          <label for="Text">Enter Your text*</label>
+          <textarea name="Text" id="Text" cols="30" rows="10" required>This code watches for audio tracks to be added to and removed from the element, and calls a hypothetical function on a track editor to register and remove the track from the editor's list of available tracks.</textarea>
+          <div class="buttonsBoll" style="display: flex; flex-direction: row; justify-content: center; gap: 10px; align-items: center;">
+            <button id="play-button" title="Play" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+              </svg>
+            </button>
+            <button id="pause-button" title="Pause" onclick="pauseTextToSpeech()">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+              </svg>
+            </button>
+            <button id="resume-button" title="Resume" onclick="resumeTextToSpeech()">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+              </svg>
+            </button>
+            <button id="download-button" disabled>
+              Download
+            </button>
+          </div>
+          <audio src="" controls id="audio" style="margin: 10px auto; opacity: 0;"></audio>
+          <p id="errors"></p>
+        </form>
       </div>
     </div>
     <div class="products-right">
@@ -161,53 +176,91 @@
     </div>
   </footer>
   <script src="/app.js"></script>
-  <script>
-    function ShowPreview() {
-        var HtmlCode = document.getElementById("html").value;
-        var CSSCode = "<style>" + document.getElementById("css").value + "</style>";
-        var jsCode = "<scri" + "pt>" + document.getElementById("js").value + "</scri" + "pt>";
-        var frame = document.getElementById("preview-window").contentWindow.document;
-        frame.open();
-        frame.write(HtmlCode + CSSCode + jsCode);
-        frame.close();
-    }
-  // Get all tab buttons and tab panes
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabPanes = document.querySelectorAll('.tab-pane');
-
-  // Add click event listeners to tab buttons
-  tabButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-  // Remove active class from all tab buttons and tab panes
-  tabButtons.forEach((btn) => btn.classList.remove('active'));
-  tabPanes.forEach((pane) => pane.classList.remove('active'));
-
-  // Add active class to the clicked tab button and corresponding tab pane
-  const tabId = button.getAttribute('data-tab');
-  const tabPane = document.getElementById(tabId);
-  button.classList.add('active');
-  tabPane.classList.add('active');
-  });
-  });
-
-  // Get the paste code button and new viewer button
-  const pasteCodeBtn = document.getElementById('pasteCodeBtn');
-  const newViewerBtn = document.getElementById('newViewerBtn');
-
-  // Add click event listeners to buttons
-  pasteCodeBtn.addEventListener('click', () => {
-  // Code for paste code button
-  console.log('Paste Code button clicked!');
-  });
-
-  newViewerBtn.addEventListener('click', () => {
-  // Code for new viewer button
-  console.log('New Viewer button clicked!');
-  });
-
-
-  </script>
   <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+  <script>
+    // Speech synthesis variables
+let synthesis;
+let utterance;
+const voicesDropdown = document.querySelector("#Voice");
+const speedInput = document.querySelector("#speed");
+const pitchInput = document.querySelector("#pitch");
+const textInput = document.querySelector("#Text");
+const audioElement = document.querySelector("#audio");
+const playButton = document.querySelector("#play-button");
+const pauseButton = document.querySelector("#pause-button");
+const resumeButton = document.querySelector("#resume-button");
+const downloadButton = document.querySelector("#download-button");
+
+// Initialize speech synthesis
+window.speechSynthesis.onvoiceschanged = populateVoices;
+
+function populateVoices() {
+  const voices = window.speechSynthesis.getVoices();
+  voicesDropdown.innerHTML = voices
+    .map(voice => `<option value="${voice.name}">${voice.name}</option>`)
+    .join("");
+}
+
+function playTextToSpeech() {
+  event.preventDefault();
+
+  synthesis = window.speechSynthesis;
+  if (synthesis.speaking) {
+    synthesis.cancel();
+  }
+
+  utterance = new SpeechSynthesisUtterance();
+  utterance.text = textInput.value;
+  utterance.voice = synthesis.getVoices().find(
+    voice => voice.name === voicesDropdown.value
+  );
+  utterance.rate = parseFloat(speedInput.value);
+  utterance.pitch = parseFloat(pitchInput.value);
+
+  synthesis.speak(utterance);
+  audioElement.src = "";
+  pauseButton.disabled = false;
+  resumeButton.disabled = true;
+  downloadButton.disabled = true;
+  downloadButton.addEventListener("click", downloadAudio);
+
+  utterance.addEventListener("end", () => {
+    pauseButton.disabled = true;
+    resumeButton.disabled = true;
+    downloadButton.disabled = false;
+  });
+}
+
+function pauseTextToSpeech() {
+  synthesis.pause();
+  pauseButton.disabled = true;
+  resumeButton.disabled = false;
+}
+
+function resumeTextToSpeech() {
+  synthesis.resume();
+  pauseButton.disabled = false;
+  resumeButton.disabled = true;
+}
+
+function downloadAudio() {
+  const blob = new Blob([audioElement.src], { type: "audio/mp3" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "speech.mp3";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+}
+
+audioElement.addEventListener("ended", () => {
+  pauseButton.disabled = true;
+  resumeButton.disabled = true;
+  downloadButton.disabled = false;
+});
+  </script>
 </body>
 
 </html>
