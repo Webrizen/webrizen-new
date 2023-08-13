@@ -63,20 +63,20 @@ input, textarea, select{
 }
 
 /* Hide scrollbar for webkit browsers (Chrome, Safari, newer versions of Opera) */
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 0;
 }
 
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background: transparent;
 }
 
 /* Hide scrollbar for Firefox */
-html {
+body {
   scrollbar-width: none;
 }
 
