@@ -125,7 +125,7 @@ function App() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Custom Web Design & Development Packages for Your Business
+          Custom Web Design & Development for Your Business
         </motion.span>
         <motion.h2
           className="servicesh2"
