@@ -1,5 +1,5 @@
 import "./styles/App.css";
-import HeroIMG from "./assets/hero.png";
+import HeroIMG from "./assets/hero.webp";
 import { BsFillBuildingsFill } from "react-icons/bs";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 
