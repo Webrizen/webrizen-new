@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/footer.css';
 import { BiLogoYoutube, BiLogoTwitter, BiLogoLinkedin, BiLogoInstagram } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -21,28 +22,28 @@ export default function Footer() {
         </div>
         <div className='about'>
             <h3>Quick links</h3>
-            <a href="">Home</a>
-            <a href="">Portfolio</a>
-            <a href="">Services</a>
-            <a href="">Products</a>
-            <a href="">Testimonials</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
+            <Link to="/">Home</Link>
+            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/products">Products</Link>
+            <Link to="/testimonials">Testimonials</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
         </div>
         <div className='about'>
             <h3>Legals</h3>
-            <a href="">Privacy Policy</a>
-            <a href="">Terms & Conditions</a>
-            <a href="">Refunds</a>
-            <a href="">FAQS</a>
-            <a href="">Press</a>
-            <a href="">Cookies</a>
-            <a href="">Advertisment</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-and-conditions">Terms & Conditions</Link>
+            <Link to="/refunds">Refunds</Link>
+            <Link to="/faqs">FAQS</Link>
+            <Link to="/press">Press</Link>
+            <Link to="/cookies">Cookies</Link>
+            <Link to="/advertisement">Advertisement</Link>
         </div>
         <div className='about'>
             <h3>Reach Us</h3>
-            <a href="tel:+">Call Us at +91 72134374274</a>
-            <a href="mailto:">mail Us At WebRizen@gmail.com</a>
+            <a href="tel:+918761820422">Call Us At +918761820422</a>
+            <a href="mailto:webrizen@gmail.com">Mail Us At WebRizen@gmail.com</a>
         </div>
     </footer> 
     </>
