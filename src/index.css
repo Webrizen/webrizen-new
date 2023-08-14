@@ -12,7 +12,7 @@
 }
 
 ::selection{
-  background: #1f1f1f;
+  background: rgb(99, 18, 240);
   color: #f0f0f0;
 }
 
@@ -34,6 +34,7 @@ body {
 body {
   color: #f5f5f5;
   background-color: #1f1f1f;
+  display: unset
 }
 
 a {

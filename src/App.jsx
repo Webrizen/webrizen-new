@@ -12,11 +12,20 @@ import bimaccanada from "./assets/bimaccanada.webp";
 import mycasaforte from "./assets/mycasaforte.webp";
 import emma from "./assets/emma.webp";
 import HireUs from './assets/hire-us.webp'
+import MultipleItems from "./component/MultipleItems";
 
 function App() {
   const [ref, inView] = useInView({
-    triggerOnce: true,
     threshold: 0.2,
+    triggerOnce: true,
+  });
+  const [ref2, inView2] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+  const [ref3, inView3] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
   });
   return (
     <>
@@ -246,15 +255,14 @@ function App() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <BsQuestion /> Why Us?
+            > Why Us?
             </motion.span>
             <motion.h1
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Big Brands Turn To Us To Elevate Their Digital Presence.
+              We elevate big brands online.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: -20 }}
@@ -296,6 +304,98 @@ function App() {
             />
           </motion.div>
         </motion.div>
+      </section>
+      <section className="services" ref={ref2}>
+        <motion.span
+          className="chip"
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Professional works this way!
+        </motion.span>
+        <motion.h2
+          className="servicesh2"
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          WORKING PROCESS
+        </motion.h2>
+        <motion.p
+          className="servicesp"
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          At WebRizen, Our team works with you closely, carefully, and creatively. We deliver flawless results on time and support you throughout your journey. We are transparent and client-focused, and we strive to go beyond your expectations.
+        </motion.p>
+        <motion.div
+          className="threecol"
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        >
+          <motion.div className="card">
+            <h3>01. Research</h3>
+            <p>
+            We dive deep into understanding your business, target audience, and market trends. Thorough research forms the foundation of our strategy.
+            </p>
+          </motion.div>
+          <motion.div className="card">
+            <h3>02. Concept</h3>
+            <p>
+            Based on the research, we develop innovative concepts and ideas that align with your goals. We brainstorm and refine until we find the perfect approach.
+            </p>
+          </motion.div>
+          <motion.div className="card">
+            <h3>03. Design & Development</h3>
+            <p>
+            With a solid concept in place, our skilled team brings it to life through captivating designs. We create visually appealing solutions that effectively communicate your message.
+            </p>
+          </motion.div>
+        </motion.div>
+        <motion.button
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
+          More Details
+        </motion.button>
+      </section>
+      <section className="services" ref={ref3}>
+        <motion.span
+          className="chip"
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          WTF! See How Clients Disrespect Us?
+        </motion.span>
+        <motion.h2
+          className="servicesh2"
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          CLIENT FEEDBACKS
+        </motion.h2>
+        <motion.p
+          className="servicesp"
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          At WebRizen, we are proud to have helped hundreds of clients achieve their online goals. Whether it’s designing a stunning website, developing a user-friendly app, or optimizing a sales funnel, we always deliver high-quality results that exceed expectations. But don’t take our word for it. Here are some of the testimonials from our satisfied customers:
+        </motion.p>
+        <MultipleItems />
+        <motion.button
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
+          More Details
+        </motion.button>
       </section>
     </>
   );
