@@ -837,4 +837,7 @@
     .clients{
         max-width: 100%;
     }
+    .leftHero p li{
+        justify-content: center;
+    }
 }
