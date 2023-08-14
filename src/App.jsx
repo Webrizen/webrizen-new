@@ -13,6 +13,7 @@ import mycasaforte from "./assets/mycasaforte.webp";
 import emma from "./assets/emma.webp";
 import HireUs from './assets/hire-us.webp'
 import MultipleItems from "./component/MultipleItems";
+import SmoothScroll from "./component/SmoothScroll";
 
 function App() {
   const [ref, inView] = useInView({
@@ -28,7 +29,8 @@ function App() {
     triggerOnce: true,
   });
   return (
-    <>
+   <SmoothScroll>
+     <>
       <div className="background">
         <span></span>
         <span></span>
@@ -398,6 +400,7 @@ function App() {
         </motion.button>
       </section>
     </>
+   </SmoothScroll>
   );
 }
 
