@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/footer.css';
-import { BiLogoYoutube, BiLogoTwitter, BiLogoLinkedin, BiLogoInstagram } from 'react-icons/bi';
+import { BiLogoYoutube, BiLogoTwitter, BiLogoLinkedin, BiLogoInstagram, BiLogoGithub } from 'react-icons/bi';
 
 export default function Footer() {
   return (
@@ -17,6 +17,7 @@ export default function Footer() {
                 <div className="ico"><BiLogoTwitter /></div>
                 <div className="ico"><BiLogoLinkedin /></div>
                 <div className="ico"><BiLogoInstagram /></div>
+                <div className="ico"><BiLogoGithub /></div>
             </div>
         </div>
         <div className='about'>
