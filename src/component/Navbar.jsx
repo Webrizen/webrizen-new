@@ -14,10 +14,7 @@ function Navbar() {
         </div>
         </Link>
         <div className="links">
-            <Link to='#'>Schedule a Call</Link>
-            <div className="ico"><BiLogoGithub /></div>
-            <div className="ico"><BiShareAlt /></div>
-            <div className="ico"><BiDonateHeart /></div>
+            <a href='https://cal.com/webrizen'>Schedule a Call</a>
         </div>
       </header>
     </>

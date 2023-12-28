@@ -80,6 +80,7 @@
 
 .leftHero h1 {
     font-size: 3.5rem;
+    font-weight: 700;
 }
 
 .leftHero button {
@@ -662,7 +663,8 @@
 }
 
 .servicesh2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    font-weight: 600;
     background: linear-gradient(135deg, #eee, #333);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

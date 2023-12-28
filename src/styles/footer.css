@@ -1,6 +1,6 @@
 .footer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     max-width: 80%;
     margin: 0 auto;
@@ -27,8 +27,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     border-radius: 4px;
     cursor: pointer;
 }

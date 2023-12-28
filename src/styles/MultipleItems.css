@@ -5,9 +5,9 @@
 .cardX {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 280px;
+    height: auto;
     width: 100%;
+    gap: 5px;
     padding: 20px;
     border-radius: 10px;
 }

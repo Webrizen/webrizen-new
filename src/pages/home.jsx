@@ -244,13 +244,6 @@ export default function Home() {
               </p>
             </motion.div>
           </motion.div>
-          <motion.button
-            initial={{ opacity: 0, y: -20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 1 }}
-          >
-            More Details
-          </motion.button>
           <br />
           <motion.h2
             className="servicesh2"
@@ -318,14 +311,6 @@ export default function Home() {
                   </li>
                 </ul>
               </motion.p>
-              <motion.button
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-              >
-                <AiOutlineDoubleRight />
-                Testimonails
-              </motion.button>
             </motion.div>
             <motion.div
               className="rightHero"
@@ -402,13 +387,6 @@ export default function Home() {
               </p>
             </motion.div>
           </motion.div>
-          <motion.button
-            initial={{ opacity: 0, y: -20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 1 }}
-          >
-            More Details
-          </motion.button>
         </section>
         <section className="services" ref={ref3}>
           <motion.span
@@ -441,13 +419,6 @@ export default function Home() {
             our satisfied customers:
           </motion.p>
           <MultipleItems feedbacks={feedbacks} />
-          <motion.button
-            initial={{ opacity: 0, y: -20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 1 }}
-          >
-            More Details
-          </motion.button>
         </section>
       </>
     </Layout>

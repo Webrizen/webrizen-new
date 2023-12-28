@@ -2,7 +2,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Portfolio from './pages/portfolio';
 import Home from './pages/home';
 import NotFound from './pages/not-found';
 
@@ -11,10 +10,6 @@ function App() {
     {
       path: "/",
       element: <Home />,
-    },
-    {
-      path: "/portfolio",
-      element: <Portfolio />,
     },
     {
       path: "*",
